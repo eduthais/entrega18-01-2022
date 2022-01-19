@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "./base/color";
+
+body{
+    background-color: $color_bg;
+    width: 95%;
+    align-content: center;
+    margin: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.colorVioleta{
+    background-color: $color_nav;
+}
+.padre{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    "hijo1 centro1 hijo2"
+    "hijo3 centro2 hijo4";
+    column-gap: 10px;
+    row-gap: none;
+    justify-items: space-between;
+    border: none;
+    .hijo1{
+        grid-area: hijo1;
+        text-align: center;
+        background-color: $color_tiras;
+    }
+    .centro1{
+        grid-area: centro1;
+        text-align: center
+    }
+    .hijo2{
+        grid-area: hijo2;
+        text-align: center;
+        background-color: $color_tiras;
+    }
+    .hijo3{
+        grid-area: hijo3;
+        background-color: $color_tiras;
+    }
+    .centro2{
+        grid-area: centro2;
+    }
+    .hijo4{
+        grid-area: hijo4;
+        background-color: rgb(236, 184, 236);
+    }
+}
+.mb-3{
+    width: 30%;
+    margin: 30px;
+    
+    .colorBotón{
+        color: purple; 
+        align-self: center;
+        
+    }
+}
+.madre{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoYoga textoYoga;
+    column-gap: 10px;
+        .videoyoga{
+            grid-area: videoYoga;
+        }
+        .textoYoga{
+            grid-area: textoYoga;
+        }
+}
+.madre2{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoMeditación textoMeditación;
+    column-gap: 10px;
+        .videoMeditación{
+            grid-area: videoMeditación;
+        }
+        .textoMeditación{
+            grid-area: textoMeditación;
+        }
+}
+.madre3{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoTerapias textoTerapias;
+    column-gap: 10px;
+        .videoMeditación{
+            grid-area: videoTerapias;
+        }
+        .textoMeditación{
+            grid-area: textoTerapias;
+        }
+}
